@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="renderer" content="webkit">
+    <meta name="renderer" content="ie-comp">
+    <meta name="renderer" content="ie-stand">
+    <link rel="icon" href="images/logoIco.png" type="image/x-icon"/>
+
+    <meta http-equiv="Page-Enter" content="revealtrans(duration=3000, transition=12)"/>
+    <meta http-equiv="Page-Exit" content="revealtrans(duration=3000, transition=12)"/>
+    {#    <meta name="keywords" content="好动健身,移动教练,健身计划,进行有氧健身操,健身教练,运动app,有氧运动,减肥方法,郑多燕减肥操,健身器材,从零开始练瑜伽,马甲线,人鱼线怎么练,跑步减肥的正确方法,跑步的好处,无氧运动,咕咚运动" /><meta name="description" content="好动健身——总有你需要的健身课程，精选健身内容。私人定制健身计划，锻炼计划，通过运动健身，让身体塑型。针对不同人群，为广大健身爱好者提供专业运动知识、精准的体能测试、跑步健身计划，体能训练课程等，让你快速减肥、健身塑型更容易，让你健身瘦身两不误。" />#}
+    <link href="../static/style/style.css?v=1.01" rel="stylesheet" type="text/css">
+    <link href="../static/style/animate.min.css" rel="stylesheet" type="text/css">
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript" src="../static/js/lib/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../static/js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="../static/js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script type="text/javascript" src="../static/js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+    <title>好动健身</title>
+    <script type="text/javascript">
+
+
+    </script>
+    <style>
+
+
+        .shituanniu {
+        {#            background-color: red;#}{#            opacity: 0.5;#}
+        }
+
+        .anniu {
+            border-bottom: 1px solid lightgray;
+            padding: 30px;
+            color: #415165;
+        {#            position: absolute;#}
+        }
+
+        .anniu:hover {
+            opacity: 0.5;
+            border-bottom: 1px solid white;
+
+        }
+
+        .anniuSelected {
+            color: #fefb13;
+
+        }
+
+        .flex_1 {
+            -webkit-flex: 1; /* Chrome */
+            -ms-flex: 1; /* IE 10 */
+            flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+            -moz-box-flex: 1; /* OLD - Firefox 19- */
+        }
+
+        .messageClass {
+            display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+            display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+            display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+            display: -moz-box; /* 老版本语法: Firefox (buggy) */
+            display: -ms-flexbox; /* 混合版本语法: IE 10 */
+            /* 09版 */
+        {#            -webkit-box-pack:flex-start;#}
+            /* 12版 */
+            -webkit-justify-content: flex-start;
+            -moz-justify-content: flex-start;
+            -ms-justify-content: flex-start;
+            -o-justify-content: flex-start;
+            justify-content: flex-start;
+            -webkit-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            -o-flex-wrap: wrap;
+            flex-wrap: wrap;
+            /* 其它取值如下：
+              align-items     主轴原点方向对齐
+              flex-end        主轴延伸方向对齐
+              space-between   等间距排列，首尾不留白
+              space-around    等间距排列，首尾留白
+             */
+        }
+
+        /* 父元素-水平居中（主轴是横向才生效） */
+        .pageClass {
+            display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+            display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+            display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+            display: -moz-box; /* 老版本语法: Firefox (buggy) */
+            display: -ms-flexbox; /* 混合版本语法: IE 10 */
+            /* 09版 */
+            -webkit-box-pack: center;
+            /* 12版 */
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            -ms-justify-content: center;
+            -o-justify-content: center;
+            justify-content: center;
+            -webkit-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            -o-flex-wrap: wrap;
+            flex-wrap: wrap;
+            /* 其它取值如下：
+              align-items     主轴原点方向对齐
+              flex-end        主轴延伸方向对齐
+              space-between   等间距排列，首尾不留白
+              space-around    等间距排列，首尾留白
+             */
+        }
+
+        .pageClassStart {
+            display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+            display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+            display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+            display: -moz-box; /* 老版本语法: Firefox (buggy) */
+            display: -ms-flexbox; /* 混合版本语法: IE 10 */
+            /* 09版 */
+        {#            -webkit-box-pack: ;#}
+            /* 12版 */
+            -webkit-justify-content: flex-start;
+            -moz-justify-content: flex-start;
+            -ms-justify-content: flex-start;
+            -o-justify-content: flex-start;
+            justify-content: flex-start;
+            -webkit-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            -o-flex-wrap: wrap;
+            flex-wrap: wrap;
+            /* 其它取值如下：
+              align-items     主轴原点方向对齐
+              flex-end        主轴延伸方向对齐
+              space-between   等间距排列，首尾不留白
+              space-around    等间距排列，首尾留白
+             */
+        }
+
+        .rightZheJiao {
+            background-image: url("../static/images/rightZheJiao.png");
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            text-align: center;
+            align-items: center;
+            line-height: 48px;
+            color: white;
+        }
+
+        #zhiHuiJianShenpage {
+            margin-top: 0px;
+            padding: 0;
+            border: 0;
+            background-image: url("../static/images/zhihuijianshenbg3.png");
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+
+        }
+
+        #jianshenfangpage {
+            margin-top: 0px;
+            padding: 0;
+            border: 0;
+            background-image: url("../static/images/jianshenfangguanlibg1 2.png");
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+
+        }
+
+        #zhinengshebeipage {
+            background-image: url("../static/images/zhinengshebie.png");
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+
+        }
+
+        #hezuoqudaopage {
+            background-image: url("../static/images/hezuoqudao.png");
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+
+        #hezuoqudaopage1 {
+            background-image: url("../static/images/pageend.png");
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+
+        .blueSectionDiv {
+            -webkit-transform: skewY(8.3deg);
+            -moz-transform: skewY(8.3deg);
+            -ms-transform: skewY(8.3deg);
+            -o-transform: skewY(8.3deg);
+            transform: skewY(8.3deg);
+            background-color: #25536a;
+        {#            #25536a#}
+        }
+
+        @-webkit-keyframes jump {
+            0% {
+                top: 0px;
+                color: white;
+            }
+            50% {
+                top: -10px;
+                color: green;
+            }
+            100% {
+                top: 10px;
+                color: blue;
+            }
+        }
+
+        .h2_hdjs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 50px;
+            left: 0px;
+{#            background-color: red;#}
+
+        }
+
+        .h2_hdjs2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            color: white;
+{#            background-color: red;#}
+        }
+
+        .h2_hdjs2 .box:nth-child(1) {
+            -webkit-animation: jump 1s linear 0s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(2) {
+            -webkit-animation: jump 1s linear 0.2s infinite alternate;
+        }
+
+        h2 .box:nth-child(3) {
+            -webkit-animation: jump 1s linear 0.4s infinite alternate;
+        }
+
+        h2 .box:nth-child(4) {
+            -webkit-animation: jump 1s linear 0.6s infinite alternate;
+        }
+
+        h2 .box:nth-child(5) {
+            -webkit-animation: jump 1s linear 0.8s infinite alternate;
+        }
+        h2 .box:nth-child(6) {
+            -webkit-animation: jump 1s linear 1s infinite alternate;
+        }
+        h2 .box:nth-child(7) {
+            -webkit-animation: jump 1s linear 1.2s infinite alternate;
+        }
+        h2 .box:nth-child(8) {
+            -webkit-animation: jump 1s linear 1.4s infinite alternate;
+        }
+        h2 .box:nth-child(9) {
+            -webkit-animation: jump 1s linear 1.6s infinite alternate;
+        }
+        h2 .box:nth-child(10) {
+            -webkit-animation: jump 1s linear 1.8s infinite alternate;
+        }
+        h2 .box:nth-child(11) {
+            -webkit-animation: jump 1s linear 2s infinite alternate;
+        }
+        h2 .box:nth-child(12) {
+            -webkit-animation: jump 1s linear 2.2s infinite alternate;
+        }
+        h2 .box:nth-child(13) {
+            -webkit-animation: jump 1s linear 2.4s infinite alternate;
+        }
+        h2 .box:nth-child(14) {
+            -webkit-animation: jump 1s linear 2.6s infinite alternate;
+        }
+        h2 .box:nth-child(15) {
+            -webkit-animation: jump 1s linear 2.8s infinite alternate;
+        }
+    </style>
+    <script>
+        var hdjs = ["H", "A", "O", "D", "O", "N", "G", "J", "I", "A", "N", "S", "H", "E", "N"]
+        $(document).ready(function () {
+            var i = 0
+            hdjs.forEach(function (dataText) {
+                $("#hdjsn_h2").append("<div class='box'>" + dataText + "</div>")
+                i = i + 0.2;
+            })
+        });
+    </script>
+
+</head>
+<body style="clear: both; display: block; margin:auto;  justify-content: center;" onresize="showMsg()">
+{#topbar#}
+<div style="padding:15px 0px;background-color: white;display: flex;flex-wrap: wrap;justify-content: flex-start;align-items: center;">
+    <img src="../static/images/logo_1.png"
+         style="width: 25px;height: 27px;margin-left:58px;margin-right: 15px "/>
+    <label class="flex_1" style="color: black;font-size: 17px;">好动健身</label>
+    <label style="margin-right: 146px;color:black;">欢迎加入智能健身</label>
+
+</div>
+
+<div style="position: relative;background-color: antiquewhite">
+    <div style="width:100%;display: block; margin:auto;justify-content: center;">
+        <div class="pageClass flex-hc" id="zhiHuiJianShenpage"
+             style="width:100%;display: flex; margin:auto;justify-content: center;align-items: center;text-align: center; position: relative;">
+            <div class="rightZheJiao" id="tiyan"
+                 style="position: absolute;width: 100px;height: 48px;top: -10px;right: 275px; ">
+                我要体验
+            </div>
+            <div class="rightZheJiao" id="xuexi"
+                 style="position: absolute;width: 100px;height: 48px;top: -10px;right: 170px; ">
+                我要合作
+            </div>
+            <div class="rightZheJiao" id="goumai"
+                 style="position: absolute;width: 100px;height: 48px;top: -10px; right: 66px;">
+                我要购买
+            </div>
+
+            <div id="firstBigDiv" style="position: relative;width: 0%;height: 0%;">
+                <img style="position: absolute;top: 0;left: 0; width: 100%;height: 100%;"
+                     src="../static/images/zhihuijianshen2.png">
+
+                {% for item in data.shituList %}
+                    <div class="shituanniu" id="shituanniu{{ item.id }}"
+                         onmouseover="shituanniu({{ item.id }})" onmouseout="shituanniuMouseout({{ item.id }})"
+                         style="width: 4%;height:8%;left: {{ item.left }}%;top: {{ item.top }}%;position: absolute; ">
+                        <div id="message{{ item.id }}"
+                             style=" visibility: hidden;height: 120%;width: 301%;position: absolute;left: 50%;bottom: 50%;border-top: 2px dashed white;border-left: 2px dashed white;">
+                            <div id="message1{{ item.id }}"
+                                 style="min-height: 50px;width: 233%;position: absolute;left: 100%;top: -25px;padding: 2px;border: 2px dashed white">
+                                <div style="padding: 2px;background-color:rgba(255,255,255,0.8);; color:#7a98af;text-align: left;padding-bottom: 10px;">
+
+                                    <div style="text-align: left;padding: 6px; font-size: 18px;">
+                                        <label>
+                                            {{ item.message.title }}
+
+                                        </label>
+                                    </div>
+                                    <label style="font-size: 14px; padding: 2px;">
+                                        {{ item.message.content }}
+                                    </label>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+
+            </div>
+
+            <h2 class="h2_hdjs" style="text-align: center;width: 100%;font-size: 18px;justify-content: center">
+                <div class="h2_hdjs2" id="hdjsn_h2" style="width: 82%;">
+
+                </div>
+
+            </h2>
+
+
+        </div>
+        {#        健身房#}
+        <div class="pageClass" id="jianshenfangpage"
+             style="width:100%;display: flex; margin:auto;justify-content: center;position: relative; color: white;overflow: hidden">
+            <div class="blueSectionDiv" id="blueBgSecond"
+                 style="width: 0;height: 5%;position: absolute;top: 60%;left: 0;">
+
+            </div>
+            <div style="position: relative;width: 42%;height: 70%;">
+
+                <img style="position: absolute;top: 23%;left: 0; width: 100%;height: 100%;"
+                     src="../static/images/jianshenfangguanli1.png">
+
+            </div>
+
+
+            {#        72#}
+            <div id="leftDIV"
+                 style="position: absolute;top: 15%;left: 100%;">
+                <div style="padding: 10px 0;">
+                    <h1 style="padding: 12px 24px;font-size:20px;text-align: center;background-color: #25536a;">
+                        {{ data.gymManagement.article.title }}
+                    </h1>
+
+                </div>
+
+                {% for datum in  data.gymManagement.article.content %}
+                    <p>
+                    <h3>
+                        {{ datum.h2 }}
+                    </h3>
+                    <label style="font-size: 14px;">
+                        {{ datum.p }}
+                    </label>
+                    </p>
+                {% endfor %}
+
+
+            </div>
+            <div class="pageClass labelLeft" id="labLeftSecond"
+                 style="position: absolute;bottom: 12%;left: 10%;font-size: 18px;">
+                <div style="width: 100%;display: block;">
+                    <p class="pageClass">
+                        <label id="leftLabSecond" class="labelLeft"
+                               style="padding: 10px 17px; border: 1px solid white;font-family:STKaiti;">
+                            {{ data.gymManagement.leftBtn.text }}
+                        </label>
+
+                    </p>
+                    <table style="margin-top: 30px;">
+                        {% for datum in data.gymManagement.leftBtn.content %}
+                            <tr>
+                                {% for dat in datum %}
+                                    <td class="td_left" style="padding: 5px 10px;">
+                                        {{ dat }}
+                                    </td>
+                                {% endfor %}
+
+                            </tr>
+                        {% endfor %}
+
+
+                    </table>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="pageClass" id="zhinengshebeipage"
+             style="width:100%;display: flex; margin:auto;justify-content: center;align-items: center;">
+            <div style="width: 72%;height: 68%;border: 1px solid white;position: relative;">
+                {% for datum in data.SmartDevices.dataList %}
+
+                    <div style="color: white; left: {{ datum.startX }}%;top: {{ datum.startY }}%;position: absolute;width: {{ datum.itemW }}%;height:{{ datum.itemH }}%;align-items: center;">
+                        <div style="position: absolute;width: {{ datum.contentPostion.w }}%; left:{{ datum.contentPostion.left }}%; top: {{ datum.contentPostion.top }}%;text-align: center;">
+                            <div style="width: 100%;padding-bottom: 15px;">
+                                <img src="../static/images/SmartDevices/logo/zhihuijianshen1_0{{ datum.id }}.png"
+                                     style="width: 50px;height: 50px;">
+                            </div>
+
+                            <label style="font-size: 18px;">
+                                {{ datum.title }}
+                            </label>
+                            <div style="text-align: left">
+                                <label style="font-size: 13px;">
+                                    {{ datum.content }}
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                {% endfor %}
+
+
+                <div style="left: 0;top: 0;position: absolute;width: 100%;height: 100%;">
+                    <svg id="svg01" height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <desc>Created with Snap</desc>
+
+                        <defs>
+                            {% for datum in data.SmartDevices.dataList %}
+                                <pattern style="visibility: hidden" id="pattern{{ datum.id }}"
+                                         patternUnits="userSpaceOnUse"
+                                         x="{{ datum.startX }}%"
+                                         y="{{ datum.startY }}%" width="{{ datum.itemW }}%" height="{{ datum.itemH }}%"
+                                >
+                                    <image id="patternimage{{ datum.id }}" x="0" data-w="{{ datum.itemW }}"
+                                           data-h="{{ datum.itemH }}"
+                                           y="0"
+                                           width="{{ datum.itemW }}%" height="{{ datum.itemH }}%" class="imagepattern"
+                                           xmlns:xlink="http://www.w3.org/1999/xlink"
+
+                                           xlink:href="../static/images/SmartDevices/pic_{{ datum.id }}.png"
+                                           preserveAspectRatio="xMidYMid slice"
+                                    ></image>
+
+                                </pattern>
+                            {% endfor %}
+
+                        </defs>
+
+
+                        {% for datum in data.SmartDevices.dataList %}
+
+                            <path onmouseout="onmouseoutPath({{ datum.id }})"
+                                  onmouseover="onmouseoverPath({{ datum.id }})" id="path{{ datum.id }}"
+                                  style="stroke-width: 1; stroke-linejoin: round;"
+                                  stroke="white"
+                                  fill="url('#pattern{{ datum.id }}')"></path>
+                        {% endfor %}
+
+
+                    </svg>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="pageClass" id="hezuoqudaopage"
+             style="width:100%;display: flex; margin:auto;justify-content: center; ">
+
+        </div>
+        <div class="pageClass" id="hezuoqudaopage1"
+             style="width:100%;display: flex; margin:auto;justify-content: center;background-color: white;align-items: center; ">
+            <div style="position: relative;top: -10px;">
+                <table border="0">
+                    <tr>
+                        <td style="text-align: right;font-size: 18px;">
+                            <ul style="margin-right: 200px;">
+                                好动健身·智能健身房管理系统
+                            </ul>
+                            <ul style="margin-right: 200px;">
+                                诚邀共赢，携手共创健身俱乐部的互联网+时代
+                            </ul>
+                            <ul style="margin-right: 200px;">
+                                合作对象：健身房智能器械设备商
+                            </ul>
+                        </td>
+                        <td style="font-size: 14px;">
+
+                            <ul class="pageClassStart" style="align-items: center;">
+                                <div>
+                                    <img src="../static/images/endImg/phone.png"
+                                         style="vertical-align: middle;width: 24px;height: 24px;position: relative;right: -20px;top: 10px;">
+                                </div>
+                                <div>
+                                    <ul>
+                                        共赢电话
+                                    </ul>
+                                    <ul>
+                                        18680889709
+                                    </ul>
+
+                                </div>
+                            </ul>
+                            <ul class="pageClassStart" style="justify-content: flex-start;">
+                                {#                                <div>#}
+                                <img src="../static/images/endImg/wx.png"
+                                     style="vertical-align: middle;width: 27px;height: 23px;position: relative;right: -20px;top: 10px;">
+                                {#                                </div>#}
+                                <div>
+                                    <ul>微信号
+                                    </ul>
+                                    <ul> 18680889709
+                                    </ul>
+
+                                </div>
+                            </ul>
+                        </td>
+                        <td style="font-size: 14px;">
+
+                            <ul class="pageClassStart" style="align-items: center;">
+                                <div>
+                                    <img src="../static/images/endImg/address.png"
+                                         style="vertical-align: middle;width: 19px;height: 23px;position: relative;right: -20px;top: 10px;">
+                                </div>
+                                <div>
+                                    <ul>
+                                        地址
+                                    </ul>
+                                    <ul>
+                                        重庆市渝中区上清寺环球广场26楼
+                                    </ul>
+
+                                </div>
+                            </ul>
+                            <ul class="pageClassStart" style="justify-content: flex-start;">
+                                {#                                <div>#}
+                                <img src="../static/images/endImg/emal.png"
+                                     style="vertical-align: middle;width: 23px;height: 17px;position: relative;right: -20px;top: 10px;">
+                                {#                                </div>#}
+                                <div>
+                                    <ul>邮箱
+                                    </ul>
+                                    <ul> 18680889709
+                                    </ul>
+
+                                </div>
+                            </ul>
+                        </td>
+                    </tr>
+
+
+                </table>
+            </div>
+
+            <div style="background-color:#25536a;opacity: 1;width: 100%;position: absolute; bottom: 0;left: 0;padding: 13px;color: white;font-size: 13px;text-align: center;">
+                <label>
+                    copyright © 2017.haodong,inc.all rights reserved.渝ICP备09021765号-5
+                </label>
+            </div>
+        </div>
+    </div>
+    {#    按钮#}
+    <div style="position:fixed;top:64px;left: 0;">
+        <div class="anniu wow bounceInLeft" data-wow-duration="1.7s" data-wow-delay="0.5s"
+             onclick="onTopClick('zhiHuiJianShen')" id="zhiHuiJianShen"
+        >
+            <img id="zhiHuiJianShen_img" src="../static/images/anniuimg/zhiHuiJianShen_img.png"
+                 style="width: 27px;height: 21px;vertical-align: middle;">
+            <a>智能健身房</a>
+        </div>
+        <div class="anniu wow bounceInLeft" data-wow-duration="1.7s" data-wow-delay="0.6s"
+             onclick="onTopClick('jianshenfang')" id="jianshenfang">
+            <img id="jianshenfang_img" src="../static/images/anniuimg/jianshenfang_img.png"
+                 style="width: 27px;height: 21px;vertical-align: middle">
+            <a>健身房管理</a>
+        </div>
+        <div class="anniu wow bounceInLeft" data-wow-duration="1.7s" data-wow-delay="0.7s"
+             onclick="onTopClick('zhinengshebei')" id="zhinengshebei"
+        >
+            <img id="zhinengshebei_img" src="../static/images/anniuimg/zhinengshebei_img.png"
+                 style="width: 27px;height: 21px;vertical-align: middle">
+            <a>智能设备</a>
+        </div>
+        <div class="anniu wow bounceInLeft" data-wow-duration="1.7s" data-wow-delay="0.8s"
+             onclick="onTopClick('hezuoqudao')" id="hezuoqudao">
+            <img id="hezuoqudao_img" src="../static/images/anniuimg/hezuoqudao_img.png"
+                 style="width: 27px;height: 21px;vertical-align: middle">
+            <a>合作渠道</a>
+        </div>
+        <div id="tankuang"
+             style="position: fixed;width: 100%;height: 100%;top: 0;left: 0;text-align: center;visibility: hidden ">
+            <div style="position:absolute;width: 100%;height: 100%;background-color: #6086a3;opacity: 0.7;top: 0;left: 0;">
+
+            </div>
+            <div class="pageClass" style="position:absolute;width: 100%;height: 100%;top: 0;left: 0; ">
+                <div style="position: relative; width:715px;height: 473px;background-color: white;opacity: 1;margin-top: 10%;">
+                    <img id="tankuangClose" src="../static/images/colose.png"
+                         style="position: absolute;width: 35px;height: 35px;top: 5px;right: 5px;">
+                    <h1 id="h1_tankuang" style="font-size: 47px;color: #4c7994;">
+                        欢迎合作智能健身房
+                    </h1>
+                    <p style="text-align: left;">
+                        <label style="font-size: 24px;margin-left: 10%;">
+                            留下您的联系方式
+                        </label>
+                        <label style="font-size: 14px;">
+                            工作人员会在24小时内与您取得联系
+                        </label>
+                    </p>
+                    <div class="pageClass" style="width: 100%;">
+
+                        <input type="text" id="txtName" placeholder="请输入姓名"
+                               style="width: 77%;height:60px;font-size: 22px; border: 1px solid #4b738f; padding: 0 10px; ">
+                        <input type="text" id="txtTel" placeholder="请输入电话"
+                               style="width: 77%;height:60px;font-size: 22px;margin: 28px 0 20px 0; border: 1px solid #4b738f;padding: 0 10px; ">
+                        <button id="btnOk"
+                                style="width: 81%;height:70px;font-size: 25px;background-color: #4b738f;color: white;">
+                            提交
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <script>
+
+            function shituanniu(index) {
+                console.log(index)
+
+                $("#message" + index).css({visibility: "visible"})
+                $("#message" + index).fadeIn(
+                    "slow"
+                )
+            }
+            function shituanniuMouseout(index) {
+                console.log(index)
+
+                $("#message" + index).fadeOut(
+                    $("#message" + index).css({visibility: "hidden"})
+                )
+
+
+            }
+
+            function showMsg() {
+                var width = $(document.body).width()
+                $("#zhiHuiJianShenpage").height(width * 1014 / 1920)
+                $("#jianshenfangpage").height(width * 1081 / 1920)
+                $("#zhinengshebeipage").height(width * 1083 / 1920)
+                $("#hezuoqudaopage").height(width * 723 / 1920)
+                $("#hezuoqudaopage1").height(width * 360 / 1920)
+                svgSize()
+
+            }
+
+
+            var width = $(document.body).width()
+            $("#zhiHuiJianShenpage").height(width * 1014 / 1920)
+            $("#jianshenfangpage").height(width * 1081 / 1920)
+            $("#zhinengshebeipage").height(width * 1083 / 1920)
+            $("#hezuoqudaopage").height(width * 723 / 1920)
+            $("#hezuoqudaopage1").height(width * 360 / 1920)
+            console.log(width)
+
+
+            var selected = "zhiHuiJianShen"
+            $("#" + selected).css({color: "#3399ff"})
+            $("#" + selected + "_img").attr({
+                "src": '../static/images/anniuimg/' + selected + '_img_1.png'
+            })
+            function onTopClick(id) {
+                if (selected == id) {
+
+                } else {
+                    $("#" + selected).css({color: "#415165"})
+                    $("#" + selected + "_img").attr({
+                        "src": '../static/images/anniuimg/' + selected + '_img.png'
+                    })
+                    selected = id
+                    $("#" + selected + "_img").attr({
+                        "src": '../static/images/anniuimg/' + selected + '_img_1.png'
+                    })
+                }
+
+                window.location.hash = "#" + id + "page";
+                $("#" + selected).css({color: "#3399ff"})
+            }
+            $(window).scroll(function () {
+                console.log('sdfsadf')
+                if ($(window).scrollTop() + $(window).height() / 2 <= $("#zhiHuiJianShenpage").height()) {
+
+                    onTopClick('zhiHuiJianShen')
+                } else if ($(window).scrollTop() + $(window).height() / 2 <= $("#zhiHuiJianShenpage").height() + $("#jianshenfangpage").height()) {
+
+                    onTopClick('jianshenfang')
+                } else if ($(window).scrollTop() + $(window).height() / 2 <= $("#zhiHuiJianShenpage").height() + $("#jianshenfangpage").height() + $("#zhinengshebeipage").height()) {
+
+                    onTopClick('zhinengshebei')
+                } else {
+
+                    onTopClick('hezuoqudao')
+                }
+            });
+
+
+            svgSize()
+            {#            svg智能设备#}
+            function svgSize() {
+                var svgWidth = $("#svg01").width()
+                var svgHeight = $("#svg01").height()
+                var svgWAng = svgWidth / 1389
+                var svgHAng = svgHeight / 747
+
+                var param = [
+                    {
+                        coordinates: [
+                            [0, 0],
+                            [516 * svgWAng, 0],
+                            [409 * svgWAng, 419 * svgHAng],
+                            [0, 346 * svgHAng],
+                        ]
+
+
+                    },
+                    {
+
+                        coordinates: [
+                            [516 * svgWAng, 0],
+                            [927 * svgWAng, 0],
+                            [976 * svgWAng, 135 * svgHAng],
+                            [794 * svgWAng, 493 * svgHAng],
+                            [447 * svgWAng, 273 * svgHAng],
+                        ],
+                    },
+                    {
+
+                        coordinates: [
+                            [878 * svgWAng, 331 * svgHAng],
+                            [976 * svgWAng, 135 * svgHAng],
+                            [927 * svgWAng, 0],
+                            [1389 * svgWAng, 0],
+                            [1389 * svgWAng, 347 * svgHAng],
+                            [1125 * svgWAng, 421 * svgHAng],
+                            [1165 * svgWAng, 305 * svgHAng],
+                        ],
+                    },
+                    {
+
+                        coordinates: [
+                            [0, 346 * svgHAng],
+                            [409 * svgWAng, 419 * svgHAng],
+                            [326 * svgWAng, 747 * svgHAng],
+                            [0, 747 * svgHAng]
+                        ],
+                    },
+                    {
+
+                        coordinates: [
+                            [326 * svgWAng, 747 * svgHAng],
+                            [447 * svgWAng, 273 * svgHAng],
+                            [724 * svgWAng, 450 * svgHAng],
+                            [783 * svgWAng, 747 * svgHAng]
+                        ],
+                    },
+                    {
+
+                        coordinates: [
+                            [724 * svgWAng, 450 * svgHAng],
+                            [793 * svgWAng, 493 * svgHAng],
+                            [878 * svgWAng, 331 * svgHAng],
+                            [1165 * svgWAng, 305 * svgHAng],
+                            [1019 * svgWAng, 747 * svgHAng],
+                            [783 * svgWAng, 747 * svgHAng]
+
+                        ],
+                    },
+                    {
+
+                        coordinates: [
+                            [1019 * svgWAng, 747 * svgHAng],
+                            [1125 * svgWAng, 421 * svgHAng],
+                            [1389 * svgWAng, 347 * svgHAng],
+                            [1389 * svgWAng, 747 * svgHAng],
+
+                        ],
+                    }
+                ]
+                console.log(param[0].coordinates.length)
+                var id = 0
+                param.forEach(function (item) {
+                    $("#path" + id).attr({
+                        "d": make_path(item.coordinates)
+                    })
+                    id++
+                })
+
+
+                function make_path(coordinates) {
+                    console.log(coordinates.length)
+                    d = "M";
+                    for (var i = 0; i < coordinates.length; i++) {
+                        if (i == 0) {
+                            d += coordinates[i][0] + " " + coordinates[i][1]
+                        } else {
+                            d += "L" + coordinates[i][0] + " " + coordinates[i][1]
+                        }
+                    }
+                    return d + "z";
+                }
+
+            }
+
+            function onmouseoverPath(id) {
+
+                {#                $("#patternimage" + id).css({#}
+                {#                    visibility: "visible"#}
+                {#                })#}
+                $("#pattern" + id).css({
+                    visibility: "visible"
+                })
+                var w = (parseInt($("#patternimage" + id).attr('data-w')) + 2).toString()
+                var h = (parseInt($("#patternimage" + id).attr('data-h')) + 2).toString()
+                console.log(w)
+                $("#patternimage" + id).animate({
+                    width: w + '%',
+                    height: h + '%'
+                })
+            }
+            function onmouseoutPath(id) {
+                var w = $("#patternimage" + id).attr('data-w')
+                var h = $("#patternimage" + id).attr('data-h')
+                $("#patternimage" + id).css({
+                    width: w + '%',
+                    height: h + '%'
+
+                })
+                $("#patternimage" + id).stop();
+                $("#pattern" + id).css({
+                    visibility: "hidden"
+                })
+            }
+            var sourceType = ''
+
+            $('#tiyan').click(function (event) {
+                sourceType = "我要体验"
+                $("#h1_tankuang").text("欢迎体验智能健身房")
+                $("#txtName").attr({
+
+                    placeholder: "请输入俱乐部名称"
+                })
+                $("#tankuang").css({
+                    visibility: "visible",
+
+                })
+
+            });
+
+
+            $('#xuexi').click(function (event) {
+                sourceType = "我要合作"
+                $("#txtName").attr({
+
+                    placeholder: "请输入姓名"
+                })
+                $("#h1_tankuang").text("欢迎合作智能健身房")
+                {#                h1_tankuang#}
+                $("#tankuang").css({visibility: "visible"})
+            });
+
+
+            $('#goumai').click(function (event) {
+                sourceType = "我要购买"
+                $("#h1_tankuang").text("欢迎购买智能健身房")
+                $("#txtName").attr({
+
+                    placeholder: "请输入姓名"
+                })
+                $("#tankuang").css({visibility: "visible"})
+            });
+            $('#tankuangClose').click(function (event) {
+                sourceType = " "
+                $("#tankuang").css({visibility: "hidden"})
+            });
+
+            {#            提交#}
+            $("#btnOk").click(function () {
+                if ($("#txtName").val() == "" || $("#txtName").val() == "请输入姓名") {
+                    alert('姓名不能为空！');
+                    return;
+                }
+
+                if ($("#txtTel").val() == "" || $("#txtTel").val() == "请输入电话") {
+                    alert('电话不能为空！');
+                    return;
+                }
+                var re = /^1\d{10}$/;
+                var yx = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+
+                if (!re.test($("#txtTel").val())) {
+                    alert('电话号码输入不正确！');
+                    return;
+                }
+
+
+                $("#btnOk").text("申请中...");
+                console.log('成功率个么')
+{#                http://www.8848fit.com/ajax/index.ashx#}
+                $.post("http://localhost", {
+                    action: "sendContactUs",
+                    txtName: $("#txtName").val(),
+                    txtTel: $("#txtTel").val(),
+                    txtCompanyName: '无',
+                    sourceType: sourceType
+                }, function (data) {
+                    console.log('成功率个么')
+                    console.log(data)
+                    if (data == 1) {
+                        alert('申请已经提交，请耐心等待！');
+                    } else if (data == "-11") {
+                        alert('每天只能发送两次申请！');
+                    } else {
+                        alert('申请失败！');
+                    }
+                    $("#btnOk").text("申请");
+                });
+
+            });
+            //输入框默认值
+
+            function showInput() {
+                $("#txtName").focus(function () {
+                    var email_txt = $(this).val();
+                    if (email_txt == this.defaultValue) {
+                        $(this).val("");
+                    }
+                });
+                $("#txtName").blur(function () {
+                    var email_txt = $(this).val();
+                    if (email_txt == "") {
+                        $(this).val(this.defaultValue);
+                    }
+                });
+                $("#txtCompanyName").focus(function () {
+                    var email_txt = $(this).val();
+                    if (email_txt == this.defaultValue) {
+                        $(this).val("");
+                    }
+                });
+                $("#txtCompanyName").blur(function () {
+                    var email_txt = $(this).val();
+                    if (email_txt == "") {
+                        $(this).val(this.defaultValue);
+                    }
+                });
+                $("#txtTel").focus(function () {
+                    var email_txt = $(this).val();
+                    if (email_txt == this.defaultValue) {
+                        $(this).val("");
+                    }
+                });
+                $("#txtTel").blur(function () {
+                    var email_txt = $(this).val();
+                    if (email_txt == "") {
+                        $(this).val(this.defaultValue);
+                    }
+                });
+            }
+
+            {#            第二张图的左下角内容#}
+            $("#leftLabSecond").mouseover(function () {
+                $(this).css({
+                    color: 'black',
+                    border: '1px solid black'
+                })
+            })
+            $("#leftLabSecond").mouseout(function () {
+                $(this).css({
+                    color: 'white',
+                    border: '1px solid white'
+                })
+            })
+
+        </script>
+
+        <script src="static/js/wow.min.js"></script>
+
+        <script>
+            //
+            <!--width: 67.3%;height: 66.3%;-->
+            //
+            <!--width: 0%;height: 0%;-->
+            if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+                new WOW().init();
+            }
+            ;
+
+            $("#firstBigDiv").delay(500)
+            $("#firstBigDiv").animate({
+                opacity: '1',
+                height: '67.3%',
+                width: '66.3%',
+            }, 1000)
+
+            var frameDuration = 0.3
+            var delayDuration = 0.03
+            var triggerHook = 0.8
+            // init controller
+            var controller = new ScrollMagic.Controller();
+
+            // build tween
+            var x = "72%"
+            var tween = TweenMax.staggerFromTo("#leftDIV", frameDuration, {left: '100%', width: 240}, {
+                left: x,
+                ease: Back.easeOut,
+                visibility: "visible"
+            });
+
+
+            // build scene
+            {#            var scene = new ScrollMagic.Scene({triggerElement: "#jianshenfangpage", duration: 0, offset: 100})#}
+            {#                    .setTween(tween)#}
+            {#                .addIndicators() // add indicators (requires plugin)#}
+            {#                    .addTo(controller)#}
+            ;
+            var tween2 = TweenMax.staggerFromTo("#labLeftSecond", frameDuration, {left: -300,}, {
+                left: '10%',
+                ease: Back.easeOut,
+                visibility: "visible"
+            });
+            {#            var scene = new ScrollMagic.Scene({triggerElement: "#leftDIV", duration: 0, offset: 200})#}
+            {#                    .setTween(tween2)#}
+            {#                .addIndicators() // add indicators (requires plugin)#}
+            {#                    .addTo(controller)#}
+            {#                ;#}
+
+
+            var animate = new TimelineMax();
+            animate.add(tween)
+            animate.add(tween2)
+            animate.add(
+                TweenMax.staggerFromTo("#blueBgSecond", frameDuration, {width: '0%'},
+                    {width: '100%'})
+            )
+
+            animate.add(
+                TweenMax.staggerFromTo("#blueBgSecond", frameDuration, {height: '5%'},
+                    {height: '80%'})
+            )
+            animate.add(
+                TweenMax.staggerFromTo("#blueBgSecond", 2, {opacity: 1},
+                    {opacity: 0.9})
+            )
+
+            var viewportHeight = $(window).height()
+            var scene = new ScrollMagic.Scene({
+                    triggerElement: "#jianshenfangpage",
+                    duration: 0,
+                    offset: $("#jianshenfangpage").height() / 2
+                })
+                    .setTween(animate)
+                    .triggerHook(triggerHook)
+                    {#                    .addIndicators()// add indicators (requires plugin)#}
+                    .addTo(controller)
+                ;
+
+        </script>
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

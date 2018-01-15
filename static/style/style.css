@@ -1,0 +1,118 @@
+@CHARSET "UTF-8";
+
+/* HTML5 defaults */
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, nav, section, time {
+    display: block;
+}
+
+/* Theme */
+.blueSectionDiv {
+    -webkit-transform: skewY(8.3deg);
+    -moz-transform: skewY(8.3deg);
+    -ms-transform: skewY(8.3deg);
+    -o-transform: skewY(8.3deg);
+    transform: skewY(8.3deg);
+    background-color: red;
+}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Microsoft YaHei";
+    min-width: 1200px;
+
+}
+
+header {
+    height: 100%;
+    position: relative;
+}
+
+header div.content {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 50%;
+    max-width: none;
+    height: 290px;
+    margin-top: -145px;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+/*header div.content h1  {
+	font-size: 12pt;
+	font-weight: normal;
+}*/
+
+header div#logo {
+    font-family: Raleway, cursive;
+    font-size: 48pt;
+    text-align: center;
+    padding-top: 30px;
+    color: #CC002A;
+}
+
+/*header div.content h1  {
+	color: #222222;
+}*/
+
+/* 父元素-水平居中（主轴是横向才生效） */
+.flex-hc {
+    display: flex;
+    /* 09版 */
+    -webkit-box-pack: center;
+    /* 12版 */
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /* 其它取值如下：
+      align-items     主轴原点方向对齐
+      flex-end        主轴延伸方向对齐
+      space-between   等间距排列，首尾不留白
+      space-around    等间距排列，首尾留白
+     */
+}
+
+.flex_1 {
+    -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1; /* OLD - Firefox 19- */
+    width: 20%; /* For old syntax, otherwise collapses. */
+    -webkit-flex: 1; /* Chrome */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+header .buttons-wrapper div.buttons div a:hover {
+    color: #222222;
+}
+
+.color-1 {
+    color: #CC002A;
+}
+
+.color-2 {
+    color: #ff007f;
+}

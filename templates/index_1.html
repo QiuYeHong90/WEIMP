@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="renderer" content="webkit">
+    <meta name="renderer" content="ie-comp">
+    <meta name="renderer" content="ie-stand">
+    <link rel="icon" href="images/logoIco.png" type="image/x-icon"/>
+
+    <meta http-equiv="Page-Enter" content="revealtrans(duration=3000, transition=12)"/>
+    <meta http-equiv="Page-Exit" content="revealtrans(duration=3000, transition=12)"/>
+    <meta name="keywords"
+          content="好动健身,移动教练,健身计划,进行有氧健身操,健身教练,运动app,有氧运动,减肥方法,郑多燕减肥操,健身器材,从零开始练瑜伽,马甲线,人鱼线怎么练,跑步减肥的正确方法,跑步的好处,无氧运动,咕咚运动"/>
+    <meta name="description"
+          content="好动健身——总有你需要的健身课程，精选健身内容。私人定制健身计划，锻炼计划，通过运动健身，让身体塑型。针对不同人群，为广大健身爱好者提供专业运动知识、精准的体能测试、跑步健身计划，体能训练课程等，让你快速减肥、健身塑型更容易，让你健身瘦身两不误。"/>
+
+
+    <!-- //custom-theme -->
+    <link href="../static/css/bootstrap.css?v=1.0.4" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../static/css/style.css?v=1.0.7" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../static/style/style.css?v=1.03" rel="stylesheet" type="text/css">
+    <link href="../static/style/animate.min.css?v=1.0.3" rel="stylesheet" type="text/css">
+    <link href="../static/style/index.css?v=1.0.7" rel="stylesheet" type="text/css">
+
+
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript" src="../static/js/lib/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../static/js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="../static/js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script type="text/javascript" src="../static/js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.timers-1.2.js"></script>
+
+    <title>好动健身</title>
+    <script type="text/javascript">
+
+
+    </script>
+    <style>
+        .upHover:hover {
+            -webkit-box-shadow: 0 15px 30px #143240;
+            box-shadow: 0 15px 30px #143240;
+            -webkit-transform: translate3d(0, -2px, 0);
+            transform: translate3d(0, -2px, 0);
+        }
+
+        .hoverSetThree {
+            -webkit-box-shadow: 0 15px 30px #143240;
+            box-shadow: 0 15px 30px #143240;
+            -webkit-transform: translate3d(0, -2px, 0);
+            transform: translate3d(0, -2px, 0);
+        }
+
+
+        .anniuTuChu:hover {
+            background-color: white;
+            color: black;
+            -webkit-box-shadow: 0 15px 30px #09161d;
+            box-shadow: 0 15px 30px #09161d;
+            -webkit-transform: translate3d(0, -2px, 0);
+            transform: translate3d(0, -2px, 0);
+
+        }
+
+        .anniuTuChu {
+            color: #fffffd;
+            transition: all .2s linear;
+        }
+
+        .topBox {
+            -webkit-box-shadow: 0 15px 30px #1a3a4c;
+            box-shadow: 12px 12px 10px #1a3a4c;
+            z-index: 10;
+        }
+
+        .container:hover .g-rect-fill {
+            fill: none;
+            stroke-width: 2;
+            stroke: #ff7700;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+
+            stroke-dasharray: 2500;
+            stroke-dashoffset: 2500;
+            animation: lineMove 2s linear forwards;
+        }
+
+        /*dash 5s linear forwards*/
+
+        @keyframes lineMove {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        {#        .fanzhuanImg#}
+        .fanzhuanImgDiv:hover {
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg); /* Safari 和 Chrome */
+            -moz-transform: rotateY(180deg); /* Firefox */
+
+        }
+
+        .fanzhuanImgDiv {
+            transition: 0.5s;
+        }
+
+        {#        @keyframes myfirst {#}
+        {#            from {#}
+        {#                transform: rotateY(0deg);#}
+        {#            }#}
+        {#            to {#}
+        {#               transform: rotateY(180deg);#}
+        {#            }#}
+        {#        }#}
+
+        .shituanniu {
+        {#            background-color: red;#}{#            opacity: 0.5;#}
+        }
+
+        .anniu {
+            border-bottom: 1px solid lightgray;
+            padding: 10px 20px;
+            color: white;
+            text-align: center;
+        {#            position: absolute;#}
+        }
+
+        .anniu:hover {
+            opacity: 0.5;
+            border-bottom: 1px solid white;
+
+        }
+
+        .anniuSelected {
+            color: #fe9b01;
+
+        }
+
+        .flex_1 {
+            -webkit-flex: 1; /* Chrome */
+            -ms-flex: 1; /* IE 10 */
+            flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+            -moz-box-flex: 1; /* OLD - Firefox 19- */
+        }
+
+        .messageClass {
+            display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+            display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+            display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+            display: -moz-box; /* 老版本语法: Firefox (buggy) */
+            display: -ms-flexbox; /* 混合版本语法: IE 10 */
+            /* 09版 */
+        {#            -webkit-box-pack:flex-start;#}
+            /* 12版 */
+            -webkit-justify-content: flex-start;
+            -moz-justify-content: flex-start;
+            -ms-justify-content: flex-start;
+            -o-justify-content: flex-start;
+            justify-content: flex-start;
+            -webkit-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            -o-flex-wrap: wrap;
+            flex-wrap: wrap;
+            /* 其它取值如下：
+              align-items     主轴原点方向对齐
+              flex-end        主轴延伸方向对齐
+              space-between   等间距排列，首尾不留白
+              space-around    等间距排列，首尾留白
+             */
+        }
+
+        /* 父元素-水平居中（主轴是横向才生效） */
+        .pageClass {
+            display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+            display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+            display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+            display: -moz-box; /* 老版本语法: Firefox (buggy) */
+            display: -ms-flexbox; /* 混合版本语法: IE 10 */
+            /* 09版 */
+            -webkit-box-pack: center;
+            /* 12版 */
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            -ms-justify-content: center;
+            -o-justify-content: center;
+            justify-content: center;
+            -webkit-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            -o-flex-wrap: wrap;
+            flex-wrap: wrap;
+            /* 其它取值如下：
+              align-items     主轴原点方向对齐
+              flex-end        主轴延伸方向对齐
+              space-between   等间距排列，首尾不留白
+              space-around    等间距排列，首尾留白
+             */
+        }
+
+        .pageClassStart {
+            display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+            display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+            display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+            display: -moz-box; /* 老版本语法: Firefox (buggy) */
+            display: -ms-flexbox; /* 混合版本语法: IE 10 */
+            /* 09版 */
+        {#            -webkit-box-pack: ;#}
+            /* 12版 */
+            -webkit-justify-content: flex-start;
+            -moz-justify-content: flex-start;
+            -ms-justify-content: flex-start;
+            -o-justify-content: flex-start;
+            justify-content: flex-start;
+            -webkit-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            -o-flex-wrap: wrap;
+            flex-wrap: wrap;
+            /* 其它取值如下：
+              align-items     主轴原点方向对齐
+              flex-end        主轴延伸方向对齐
+              space-between   等间距排列，首尾不留白
+              space-around    等间距排列，首尾留白
+             */
+        }
+
+        .rightZheJiao {
+            background-image: url("../static/images/rightZheJiao.png?v=1.0.1");
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            text-align: center;
+            align-items: center;
+            line-height: 48px;
+            color: white;
+        }
+
+        #zhiHuiJianShenpage {
+            margin-top: 0px;
+            padding: 0;
+            border: 0;
+        {#            background-image: url("../static/images/zhihuijianshenbg3.png");#} background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+
+        }
+
+        #jianshenfangpage {
+            margin-top: 0px;
+            padding: 0;
+            border: 0;
+            background-image: url("../static/images/bg/jianshenfangguanlibg_0.png");
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+
+        }
+
+        #zhinengshebeipage {
+            background-image: url("../static/images/bg/zhinengshebie_0.png");
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+
+        }
+
+        #hezuoqudaopage {
+            background-image: url("../static/images/hezuoqudao.png");
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+
+        #hezuoqudaopage1 {
+            background-image: url("../static/images/bg/pageend_1.png");
+            background-size: 100% 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+
+        .blueSectionDiv {
+            -webkit-transform: skewY(8.3deg);
+            -moz-transform: skewY(8.3deg);
+            -ms-transform: skewY(8.3deg);
+            -o-transform: skewY(8.3deg);
+            transform: skewY(8.3deg);
+            background-color: #25536a;
+        {#            #25536a#}
+        }
+
+        @-webkit-keyframes jump {
+            0% {
+                top: 0px;
+                color: white;
+            }
+            50% {
+                top: -10px;
+                color: black;
+            }
+            100% {
+                top: 10px;
+                color: white
+            }
+        }
+
+        .h2_hdjs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 50px;
+            left: 0px;
+        {#            background-color: red;#}
+
+        }
+
+        .h2_hdjs2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            color: white;
+        {#            background-color: red;#}
+        }
+
+        .h2_hdjs2 .box:nth-child(1) {
+            -webkit-animation: jump 1s linear 0s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(2) {
+            -webkit-animation: jump 1s linear 0.2s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(3) {
+            -webkit-animation: jump 1s linear 0.4s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(4) {
+            -webkit-animation: jump 1s linear 0.6s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(5) {
+            -webkit-animation: jump 1s linear 0.8s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(6) {
+            -webkit-animation: jump 1s linear 1s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(7) {
+            -webkit-animation: jump 1s linear 1.2s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(8) {
+            -webkit-animation: jump 1s linear 1.4s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(9) {
+            -webkit-animation: jump 1s linear 1.6s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(10) {
+            -webkit-animation: jump 1s linear 1.8s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(11) {
+            -webkit-animation: jump 1s linear 2s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(12) {
+            -webkit-animation: jump 1s linear 2.2s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(13) {
+            -webkit-animation: jump 1s linear 2.4s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(14) {
+            -webkit-animation: jump 1s linear 2.6s infinite alternate;
+        }
+
+        .h2_hdjs2 .box:nth-child(15) {
+            -webkit-animation: jump 1s linear 2.8s infinite alternate;
+        }
+    </style>
+    <script>
+        var hdjs = ["H", "A", "O", "D", "O", "N", "G", "J", "I", "A", "N", "S", "H", "E", "N"]
+        $(document).ready(function () {
+            var i = 0
+            hdjs.forEach(function (dataText) {
+                $("#hdjsn_h2").append("<div class='box'>" + dataText + "</div>")
+                i = i + 0.2;
+            })
+        });
+    </script>
+
+</head>
+<body style="clear: both; display: block; margin:auto;  justify-content: center;" onresize="showMsg()">
+{#topbar#}
+
+
+<div style="position: relative;    background-color: #26516b;">
+
+    <div style="width:100%;display: block; margin:auto;justify-content: center;">
+        <div style="width: 98%; height: auto; border: 0px solid red; margin: 0px auto; position: fixed;
+            bottom: 50px;">
+            <div id="gotop" style="width: 40px; height: auto; text-align: center; padding: 5px 5px 5px 5px;
+                float: right; background-color: rgba(0,0,0,0.2); border: 0px solid red; cursor: pointer;">
+                <span style="color: White;">▲</span><br/>
+                <span style="color: White;">顶部</span>
+            </div>
+        </div>
+
+        <div class="topBox"
+             style="padding:15px 0px;background-color: white;display: flex;flex-wrap: wrap;justify-content: flex-start;align-items: center;">
+            <img src="../static/images/logo_1.png"
+                 style="width: 25px;height: 27px;margin-left:58px;margin-right: 15px "/>
+            <label class="flex_1" style="color: black;font-size: 21px;margin-top: 10px;">好动健身</label>
+            <label style="margin-right: 146px;color:black;font-size: 18px;font-weight: 200;">欢迎加入智能健身</label>
+
+        </div>
+        <div class="pageClass flex-hc" id="zhiHuiJianShenpage"
+             style="width:100%;display: flex; margin:auto;justify-content: center;align-items: center;text-align: center; position: relative;">
+            <div class="rightZheJiao" id="tiyan"
+                 style="position: absolute;width: 100px;height: 48px;top: -10px;right: 275px; ">
+                我要体验
+            </div>
+            <div class="rightZheJiao" id="xuexi"
+                 style="position: absolute;width: 100px;height: 48px;top: -10px;right: 170px; ">
+                我要合作
+            </div>
+            <div class="rightZheJiao" id="goumai"
+                 style="position: absolute;width: 100px;height: 48px;top: -10px; right: 66px;">
+                我要购买
+            </div>
+
+            <div id="firstBigDiv" style="position: relative;width: 0%;height: 0%;">
+                <img style="position: absolute;top: 0;left: 0; width: 100%;height: 100%;"
+                     src="../static/images/zhihuijianshen2.png">
+
+                {% for item in data.shituList %}
+
+                    <div class="shituanniu" id="shituanniu{{ item.id }}"
+                         onmouseover="shituanniu({{ item.id }})" onmouseout="shituanniuMouseout({{ item.id }})"
+                         style="width: 4%;height:8%;left: {{ item.left }}%;top: {{ item.top }}%;position: absolute; ">
+                        {#                    visibility: hidden;#}
+                        <div id="message{{ item.id }}"
+                             style="display: none; height: 120%;width: 301%;position: absolute;left: 50%;bottom: 50%;border-left: 2px dashed white;border-top:2px dashed white;">
+                            <div id="message1{{ item.id }}"
+                                 style="min-height: 50px;width: 233%;position: absolute;left: 100%;top: -25px;padding: 2px;border: 2px dashed white">
+                                <div id="title_content{{ item.id }}"
+                                     style="padding: 2px;background-color:rgba(255,255,255,0.8);; color:#26516b;text-align: left;padding-bottom: 10px;">
+
+                                    <div style="text-align: left;padding: 6px; font-size: 18px;">
+                                        <label>
+                                            {{ item.message.title }}
+
+                                        </label>
+                                    </div>
+                                    <label style="font-size: 14px; padding: 2px;">
+                                        {{ item.message.content }}
+                                    </label>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                {% endfor %}
+
+
+            </div>
+            {#            <div class="wow bounceInRight"#}
+            {#                 style="position: absolute;top: 92px;right: 61px;font-size: 14px;text-align: left;color:white;font-weight: 300;line-height:40px;">#}
+            {#                荆棘鸟软件在深圳从事最早的语音<br/>板卡技术开发,解决运营增值服务、<br/>改号业务、秘书台<br/>等电信综合业务系统。#}
+            {#            </div>#}
+            <h2 class="h2_hdjs" style="text-align: center;width: 100%;font-size: 18px;justify-content: center">
+                <div class="h2_hdjs2" id="hdjsn_h2" style="width: 82%;font-size: 14px;">
+
+                </div>
+
+            </h2>
+
+
+        </div>
+        {#        健身房#}
+        <div class="pageClass" id="jianshenfangpage"
+             style="width:100%;display: flex; margin:auto;justify-content: center;position: relative; color: white;overflow: hidden;">
+            {#            <div class="blueSectionDiv" id="blueBgSecond"#}
+            {#                 style="width: 0;height: 5%;position: absolute;top: 60%;left: 0;">#}
+            {##}
+            {#            </div>#}
+            {#            <div style="position: relative;width: 42%;height: 70%;">#}
+            {##}
+            {#                <img style="position: absolute;top: 23%;left: 0; width: 100%;height: 100%;"#}
+            {#                     src="../static/images/jianshenfangguanli1.png">#}
+            {##}
+            {#            </div>#}
+            <div class="pageClass "
+                 style="position: absolute;bottom: 0px;left: 0;width: 100%;height :497px;background-color: rgba(38,81,107,0.5);">
+                <div class="flex-start" style="height: 100%;width: 60%;color: #fffffd;">
+
+
+                    {% for datum in  data.gymManagement.article.content %}
+                        {% if datum.h2 == '规范数据管理' %}
+                            <div class="flex-center" style="width: 32%;height: 50%;align-items: center;">
+                                <div class="anniuTuChu"
+                                     style="text-align: center;border: 1px solid white;width: 90%;padding: 10px 0; ">
+                                    <h3 class="anniuTuChuH3"
+                                        style="font-family: STFangsong ;">{{ data.gymManagement.article.title }}</h3>
+                                </div>
+
+                            </div>
+                        {% endif %}
+                        <div class="fanzhuanItemDiv" style="width: 32%;height: 50%;">
+                            <div class="flex-center " style="width: 100%;margin-top: 10%;">
+                                <div class="flex-center fanzhuanImgDiv"
+                                     style="width: 92px;height: 92px;border-radius: 50%;align-items: center;border: 2px solid white;">
+                                    <img class="fanzhuanImg" id="fanzhuanimg{{ datum.pic }}"
+                                         src="../static/images/secondPage/second_{{ datum.pic }}.png"
+                                         style="width: 60%;height: 60%;vertical-align: middle;">
+
+                                </div>
+
+                            </div>
+                            <div style="text-align: center;">
+                                <br/>
+                                <label style="font-size: 18px;font-weight: bold;font-weight: 400;">{{ datum.h2 }}</label>
+                                <br/>
+                                <label style="font-size: 14px;;font-weight: bold;color: #bbbbbb;font-weight: 200;">{{ datum.p }}</label>
+                            </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+        </div>
+        <div class="pageClass" id="zhinengshebeipage"
+             style="width:100%;display: flex; margin:auto;justify-content: center;align-items: center;">
+
+            <div class="flex-around" style="width: 60%;height: 90%;padding-top: 2%;">
+
+                {% for datum in data.SmartDevices.dataList %}
+                    <div id="threePicDiv{{ datum.id }}" class="col-md-3 agile_banner_bottom_grid upHover" data-index="{{ datum.id }}"
+                         style="height: 46%;width:22.6%;padding: 0;">
+                        <div class="view view-first" style="height: 100%;width: 100%;padding: 0;margin: 0;">
+                            <img src="../static/images/SmartDevices/pic_0{{ datum.id }}.png" alt=" "
+                                 class="" style="height: 100%;width: 100%;"/>
+                            <div id="threePicDivMask{{ datum.id }}" class="mask flex-center">
+                                <div class="flex-center"
+                                     style="width: 44%;height: 23%;border: 1px solid white;align-items: center; margin-top: 23.5%;">
+                                    <img src="../static/images/SmartDevices/logo/zhihuijianshen3_0{{ datum.id }}.png"
+                                         style="width: 43%;height: 54%;vertical-align: middle;"
+                                         class="img-responsive agileits_w3layouts1">
+
+                                </div>
+                                <div>
+                                    <h5 id="threeH5{{ datum.id }}"
+                                        style="margin-top: 0;color: #f2f9fe; ">{{ datum.title }}</h5>
+                                    <p id="threeP{{ datum.id }}"
+                                       style="color: #f2f9fe; font-family: Microsoft YaHei">{{ datum.content }}</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                {% endfor %}
+
+
+            </div>
+
+
+        </div>
+        <div class="pageClass" id="hezuoqudaopage"
+             style="width:100%;display: flex; margin:auto;justify-content: center; ">
+
+        </div>
+        <div class="pageClass" id="hezuoqudaopage1"
+             style="width:100%;display: flex; margin:auto;justify-content: center;background-color: white;align-items: center;color: white ">
+            <div style="position: relative;top: -10px;">
+                <table border="0">
+                    <tr>
+                        <td style="text-align: right;">
+                            <ul style="margin-right: 200px;font-size: 18px;padding: 10px;">
+                                好动健身·智能健身房管理系统
+                            </ul>
+                            <ul style="margin-right: 200px;font-size: 18px;padding: 10px;">
+                                诚邀共赢，携手共创健身俱乐部的互联网+时代
+                            </ul>
+                            <ul style="margin-right: 200px;font-size: 18px;padding: 10px;">
+                                合作对象：健身房智能器械设备商
+                            </ul>
+                        </td>
+                        <td style="font-size: 14px;">
+
+                            <ul class="pageClassStart" style="align-items: center;padding: 10px;">
+                                <div>
+                                    <img src="../static/images/endImg/phone0.png"
+                                         style="vertical-align: middle;width: 24px;height: 24px;position: relative;top: 10px;">
+                                </div>
+                                <div style="margin-left: 9px;">
+                                    <ul>
+                                        共赢电话
+                                    </ul>
+                                    <ul style="color: white">
+                                        18680889709
+                                    </ul>
+
+                                </div>
+                            </ul>
+                            <ul class="pageClassStart" style="justify-content: flex-start;padding: 10px;">
+                                {#                                <div>#}
+                                <img src="../static/images/endImg/wx0.png"
+                                     style="vertical-align: middle;width: 27px;height: 23px;position: relative;top: 10px;">
+                                {#                                </div>#}
+                                <div style="margin-left: 9px;">
+                                    <ul>微信号
+                                    </ul>
+                                    <ul style="color: white"> fitness8848
+                                    </ul>
+
+                                </div>
+                            </ul>
+                        </td>
+                        <td style="font-size: 14px;">
+
+                            <ul class="pageClassStart" style="align-items: center;margin-left: 60px;padding: 10px;">
+                                <div>
+                                    <img src="../static/images/endImg/address0.png"
+                                         style="vertical-align: middle;width: 19px;height: 23px;position: relative;top: 10px;">
+                                </div>
+                                <div style="margin-left: 9px;">
+                                    <ul>
+                                        地址
+                                    </ul>
+                                    <ul>
+                                        重庆市渝中区上清寺环球广场26楼
+                                    </ul>
+
+                                </div>
+                            </ul>
+                            <ul class="pageClassStart"
+                                style="justify-content: flex-start;margin-left: 60px;padding: 10px;">
+                                {#                                <div>#}
+                                <img src="../static/images/endImg/emal0.png"
+                                     style="vertical-align: middle;width: 23px;height: 17px;position: relative;top: 10px;">
+                                {#                                </div>#}
+                                <div style="margin-left: 9px;">
+                                    <ul>邮箱
+                                    </ul>
+                                    <ul style="color: white"> wangjing@tbivr.com
+                                    </ul>
+
+                                </div>
+                            </ul>
+                        </td>
+                    </tr>
+
+
+                </table>
+            </div>
+
+            <div style="background-color:#172f40;opacity: 1;width: 100%;position: absolute; bottom: 0;left: 0;padding: 13px;color: white;font-size: 13px;text-align: center;">
+                <label style="color: #d4d4d4;">
+                    opyright © 2015.haodong,inc.all rights reserved.渝ICP备09021765号-5
+                </label>
+            </div>
+        </div>
+    </div>
+    {#    按钮#}
+    <div style="position:fixed;top:137px;left: 0;">
+        <div class="anniu wow bounceInLeft" data-wow-duration="1.7s" data-wow-delay="0.5s"
+             onclick="onTopClick('zhiHuiJianShen')" id="zhiHuiJianShen"
+        >
+            <div class="flex-center" style="width: 100%;padding-bottom: 10px;">
+                <img id="zhiHuiJianShen_img" src="../static/images/anniuimg/zhiHuiJianShen_img_0.png"
+                >
+            </div>
+            <label>智能健身房</label>
+        </div>
+        <div class="anniu wow bounceInLeft" data-wow-duration="1.7s" data-wow-delay="0.6s"
+             onclick="onTopClick('jianshenfang')" id="jianshenfang">
+            <div class="flex-center">
+                <img id="jianshenfang_img" src="../static/images/anniuimg/jianshenfang_img_0.png"
+                >
+            </div>
+            <label>健身房管理</label>
+        </div>
+        <div class="anniu wow bounceInLeft" data-wow-duration="1.7s" data-wow-delay="0.7s"
+             onclick="onTopClick('zhinengshebei')" id="zhinengshebei"
+        >
+            <div class="flex-center">
+                <img id="zhinengshebei_img" src="../static/images/anniuimg/zhinengshebei_img_0.png"
+                >
+            </div>
+            <label>智能设备</label>
+        </div>
+        <div class="anniu wow bounceInLeft" data-wow-duration="1.7s" data-wow-delay="0.8s"
+             onclick="onTopClick('hezuoqudao')" id="hezuoqudao">
+            <div class="flex-center">
+                <img id="hezuoqudao_img" src="../static/images/anniuimg/hezuoqudao_img_0.png"
+                >
+            </div>
+            <label>合作渠道</label>
+        </div>
+    </div>
+    <div id="tankuang"
+         style="position: fixed;width: 100%;height: 100%;top: 0;left: 0;text-align: center;visibility: hidden ">
+        <div style="position:absolute;width: 100%;height: 100%;background-color: #294152;opacity: 0.7;top: 0;left: 0;">
+
+        </div>
+        <div class="pageClass" style="position:absolute;width: 100%;height: 100%;top: 0;left: 0; ">
+            <div style="position: relative; width:715px;height: 473px;background-color: white;opacity: 1;margin-top: 10%;">
+                <img id="tankuangClose" src="../static/images/colose.png"
+                     style="position: absolute;width: 35px;height: 35px;top: 5px;right: 5px;">
+                <h1 id="h1_tankuang" style="font-size: 47px;color: #4c7994;">
+                    欢迎合作智能健身房
+                </h1>
+                <p style="text-align: left;">
+                    <label style="font-size: 24px;margin-left: 10%;">
+                        留下您的联系方式
+                    </label>
+                    <label style="font-size: 14px;">
+                        工作人员会在24小时内与您取得联系
+                    </label>
+                </p>
+                <div class="pageClass" style="width: 100%;margin-top: 20px;">
+
+                    <input type="text" id="txtName" placeholder="请输入姓名"
+                           style="width: 100%;height:60px;font-size: 22px; border: 1px solid #4b738f; padding: 0 10px; ">
+                    <input type="text" id="txtTel" placeholder="请输入电话"
+                           style="width: 100%;height:60px;font-size: 22px;margin: 28px 0 20px 0; border: 1px solid #4b738f;padding: 0 10px; ">
+                    <button id="btnOk"
+                            style="width: 100%;height:70px;font-size: 25px;background-color: #4b738f;color: white;">
+                        提交
+                    </button>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script>
+        var threeData = []
+        {% for datum in data.SmartDevices.dataList %}
+            threeData.push("{{ datum.id }}")
+
+        {% endfor %}
+        console.log(threeData.length)
+
+        var selectedThreePageIndex = 0
+        $(".upHover").hover(function () {
+             $('body').stopTime("ThreePagePicCycle")
+            if($(this).attr("data-index")==selectedThreePageIndex){
+
+            }else {
+                threePagePicUpdate($(this).attr("data-index"))
+            }
+
+        },function () {
+             startTimerEveryTimeThree()
+        })
+
+
+
+        startTimerEveryTimeThree()
+        var Threeindex = 0
+
+        function startTimerEveryTimeThree() {
+
+            threePagePicUpdate( parseInt(threeData[Threeindex++% 8]))
+            $('body').everyTime('2s', "ThreePagePicCycle", function () {
+                threePagePicUpdate( parseInt(threeData[Threeindex% 8]))
+                console.log(parseInt(threeData[Threeindex% 8]))
+                Threeindex++
+            });
+        }
+        function threePagePicUpdate(id) {
+            if (selectedThreePageIndex == id) {
+
+            } else {
+                state1(selectedThreePageIndex)
+                selectedThreePageIndex = id
+
+
+            }
+            state2(selectedThreePageIndex)
+            console.log("threePicDiv" + id.toString())
+
+        }
+
+
+        {#        移除#}
+        function state1(id) {
+            $("#threePicDiv" + id.toString()).removeClass("hoverSetThree")
+            $("#threePicDivMask" + id.toString()).css({
+                opacity: 0
+            })
+            $("#threeH5" + id.toString()).animate({
+                top:0,
+                opacity: 0
+            })
+             $("#threeH5" + id.toString()).css({
+                top:0,
+                opacity: 0
+            })
+            $("#threeP" + id.toString()).css({
+                top:0,
+                opacity: 0
+            })
+
+        }
+        {#        添加#}
+        function state2(id) {
+            $("#threePicDiv" + id.toString()).toggleClass("hoverSetThree")
+            $("#threePicDivMask" + id.toString()).css({
+                opacity: 1
+            })
+            $("#threeH5" + id.toString()).css({
+                top:100,
+                opacity: 1
+            })
+            $("#threeP" + id.toString()).css({
+                top:-100,
+                opacity: 1
+            })
+
+        }
+
+
+        var selectedShiTuanniu = 4
+
+        function shituanniu(index) {
+            console.log(index)
+            $('body').stopTime("firstPageMessageCycle")
+            updateShow(index)
+
+        }
+
+
+        function shituanniuMouseout(index) {
+            {#            console.log(index)#}
+            {#            if (selectedShiTuanniu != index) {#}
+            {#                $("#message" + selectedShiTuanniu).css({visibility: "hidden"})#}
+            {#                selectedShiTuanniu = index#}
+            {##}
+            {#            }#}
+            {##}
+            {#            $("#message" + index).css({visibility: "hidden"})#}
+            startTimerEveryTime()
+
+        }
+
+        function startTimerEveryTime() {
+            $('body').everyTime('5s', "firstPageMessageCycle", updateNextMessage);
+        }
+
+        $("#firstBigDiv").animate({
+            opacity: '1',
+            height: '75%',
+            width: '74%',
+        }, 1000, function () {
+            setTimeout(function () {
+                updateShow(selectedShiTuanniu)
+            }, 500);
+
+            startTimerEveryTime()
+
+
+        })
+
+        function updateNextMessage() {
+            var index1 = (selectedShiTuanniu + 1) % 8
+            updateShow(index1)
+        }
+        function updateShow(index) {
+            if (selectedShiTuanniu != index) {
+
+                $("#message" + selectedShiTuanniu).fadeOut(1000);
+                selectedShiTuanniu = index
+
+            }
+
+            $("#message" + selectedShiTuanniu).fadeIn(1000);
+        }
+
+
+        function showMsg() {
+            var width = $(document.body).width()
+            $("#zhiHuiJianShenpage").height(width * 1014 / 1920)
+            $("#jianshenfangpage").height(width * 980 / 1920)
+            $("#zhinengshebeipage").height(width * 910 / 1920)
+            $("#hezuoqudaopage").height(width * 723 / 1920)
+            $("#hezuoqudaopage1").height(width * 324 / 1920)
+            svgSize()
+
+        }
+
+
+        var width = $(document.body).width()
+        $("#zhiHuiJianShenpage").height(width * 1014 / 1920)
+        $("#jianshenfangpage").height(width * 980 / 1920)
+        $("#zhinengshebeipage").height(width * 910 / 1920)
+        $("#hezuoqudaopage").height(width * 723 / 1920)
+        $("#hezuoqudaopage1").height(width * 324 / 1920)
+        console.log(width)
+
+
+        var selected = "zhiHuiJianShen"
+        $("#" + selected).css({color: "#anniu"})
+        $("#" + selected + "_img").attr({
+            "src": '../static/images/anniuimg/' + selected + '_img_1_0.png'
+        })
+        function onTopClick(id) {
+            if (selected == id) {
+
+            } else {
+                $("#" + selected).css({color: "white"})
+                $("#" + selected + "_img").attr({
+                    "src": '../static/images/anniuimg/' + selected + '_img_0.png'
+                })
+                selected = id
+                $("#" + selected + "_img").attr({
+                    "src": '../static/images/anniuimg/' + selected + '_img_1_0.png'
+                })
+            }
+
+            window.location.hash = "#" + id + "page";
+            $("#" + selected).css({color: "#fe9b01"})
+        }
+        $(window).scroll(function () {
+            console.log('sdfsadf')
+            if ($(window).scrollTop() + $(window).height() / 2 <= $("#zhiHuiJianShenpage").height()) {
+
+                onTopClick('zhiHuiJianShen')
+            } else if ($(window).scrollTop() + $(window).height() / 2 <= $("#zhiHuiJianShenpage").height() + $("#jianshenfangpage").height()) {
+
+                onTopClick('jianshenfang')
+            } else if ($(window).scrollTop() + $(window).height() / 2 <= $("#zhiHuiJianShenpage").height() + $("#jianshenfangpage").height() + $("#zhinengshebeipage").height()) {
+
+                onTopClick('zhinengshebei')
+            } else {
+
+                onTopClick('hezuoqudao')
+            }
+        });
+
+
+        svgSize()
+        {#            svg智能设备#}
+        function svgSize() {
+            var svgWidth = $("#svg01").width()
+            var svgHeight = $("#svg01").height()
+            var svgWAng = svgWidth / 1389
+            var svgHAng = svgHeight / 747
+
+            var param = [
+                {
+                    coordinates: [
+                        [0, 0],
+                        [516 * svgWAng, 0],
+                        [409 * svgWAng, 419 * svgHAng],
+                        [0, 346 * svgHAng],
+                    ]
+
+
+                },
+                {
+
+                    coordinates: [
+                        [516 * svgWAng, 0],
+                        [927 * svgWAng, 0],
+                        [976 * svgWAng, 135 * svgHAng],
+                        [794 * svgWAng, 493 * svgHAng],
+                        [447 * svgWAng, 273 * svgHAng],
+                    ],
+                },
+                {
+
+                    coordinates: [
+                        [878 * svgWAng, 331 * svgHAng],
+                        [976 * svgWAng, 135 * svgHAng],
+                        [927 * svgWAng, 0],
+                        [1389 * svgWAng, 0],
+                        [1389 * svgWAng, 347 * svgHAng],
+                        [1125 * svgWAng, 421 * svgHAng],
+                        [1165 * svgWAng, 305 * svgHAng],
+                    ],
+                },
+                {
+
+                    coordinates: [
+                        [0, 346 * svgHAng],
+                        [409 * svgWAng, 419 * svgHAng],
+                        [326 * svgWAng, 747 * svgHAng],
+                        [0, 747 * svgHAng]
+                    ],
+                },
+                {
+
+                    coordinates: [
+                        [326 * svgWAng, 747 * svgHAng],
+                        [447 * svgWAng, 273 * svgHAng],
+                        [724 * svgWAng, 450 * svgHAng],
+                        [783 * svgWAng, 747 * svgHAng]
+                    ],
+                },
+                {
+
+                    coordinates: [
+                        [724 * svgWAng, 450 * svgHAng],
+                        [793 * svgWAng, 493 * svgHAng],
+                        [878 * svgWAng, 331 * svgHAng],
+                        [1165 * svgWAng, 305 * svgHAng],
+                        [1019 * svgWAng, 747 * svgHAng],
+                        [783 * svgWAng, 747 * svgHAng]
+
+                    ],
+                },
+                {
+
+                    coordinates: [
+                        [1019 * svgWAng, 747 * svgHAng],
+                        [1125 * svgWAng, 421 * svgHAng],
+                        [1389 * svgWAng, 347 * svgHAng],
+                        [1389 * svgWAng, 747 * svgHAng],
+
+                    ],
+                }
+            ]
+            console.log(param[0].coordinates.length)
+            var id = 0
+            param.forEach(function (item) {
+                $("#path" + id).attr({
+                    "d": make_path(item.coordinates)
+                })
+                id++
+            })
+
+
+            function make_path(coordinates) {
+                console.log(coordinates.length)
+                d = "M";
+                for (var i = 0; i < coordinates.length; i++) {
+                    if (i == 0) {
+                        d += coordinates[i][0] + " " + coordinates[i][1]
+                    } else {
+                        d += "L" + coordinates[i][0] + " " + coordinates[i][1]
+                    }
+                }
+                return d + "z";
+            }
+
+        }
+
+        function onmouseoverPath(id) {
+
+            {#                $("#patternimage" + id).css({#}
+            {#                    visibility: "visible"#}
+            {#                })#}
+            $("#pattern" + id).css({
+                visibility: "visible"
+            })
+            var w = (parseInt($("#patternimage" + id).attr('data-w')) + 2).toString()
+            var h = (parseInt($("#patternimage" + id).attr('data-h')) + 2).toString()
+            console.log(w)
+            $("#patternimage" + id).animate({
+                width: w + '%',
+                height: h + '%'
+            })
+        }
+        function onmouseoutPath(id) {
+            var w = $("#patternimage" + id).attr('data-w')
+            var h = $("#patternimage" + id).attr('data-h')
+            $("#patternimage" + id).css({
+                width: w + '%',
+                height: h + '%'
+
+            })
+            $("#patternimage" + id).stop();
+            $("#pattern" + id).css({
+                visibility: "hidden"
+            })
+        }
+        var sourceType = ''
+
+        $('#tiyan').click(function (event) {
+            sourceType = "我要体验"
+            $("#h1_tankuang").text("欢迎体验智能健身房")
+            $("#txtName").attr({
+
+                placeholder: "请输入俱乐部名称"
+            })
+            $("#tankuang").css({
+                visibility: "visible",
+
+            })
+
+        });
+
+
+        $('#xuexi').click(function (event) {
+            sourceType = "我要合作"
+            $("#txtName").attr({
+
+                placeholder: "请输入姓名"
+            })
+            $("#h1_tankuang").text("欢迎合作智能健身房")
+            {#                h1_tankuang#}
+            $("#tankuang").css({visibility: "visible"})
+        });
+
+
+        $('#goumai').click(function (event) {
+            sourceType = "我要购买"
+            $("#h1_tankuang").text("欢迎购买智能健身房")
+            $("#txtName").attr({
+
+                placeholder: "请输入姓名"
+            })
+            $("#tankuang").css({visibility: "visible"})
+        });
+        $('#tankuangClose').click(function (event) {
+            sourceType = " "
+            $("#tankuang").css({visibility: "hidden"})
+        });
+
+        {#            提交#}
+        $("#btnOk").click(function () {
+            if ($("#txtName").val() == "" || $("#txtName").val() == "请输入姓名") {
+                alert('姓名不能为空！');
+                return;
+            }
+
+            if ($("#txtTel").val() == "" || $("#txtTel").val() == "请输入电话") {
+                alert('电话不能为空！');
+                return;
+            }
+            var re = /^1\d{10}$/;
+            var yx = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+
+            if (!re.test($("#txtTel").val())) {
+                alert('电话号码输入不正确！');
+                return;
+            }
+
+
+            $("#btnOk").text("提交中...");
+            console.log('成功率个么')
+            {#                http://www.8848fit.com/ajax/index.ashx#}
+            $.post("ajax/index.ashx", {
+                action: "sendContactUs",
+                txtName: $("#txtName").val(),
+                txtTel: $("#txtTel").val(),
+                txtCompanyName: '无',
+                sourceType: sourceType
+            }, function (data) {
+                console.log('成功率个么')
+                console.log(data)
+                if (data == 1) {
+                    alert('已经提交，请耐心等待！');
+                } else if (data == "-11") {
+                    alert('每天只能发送两次提交！');
+                } else {
+                    alert('提交失败！');
+                }
+                $("#btnOk").text("提交");
+            });
+
+        });
+        //输入框默认值
+
+        function showInput() {
+            $("#txtName").focus(function () {
+                var email_txt = $(this).val();
+                if (email_txt == this.defaultValue) {
+                    $(this).val("");
+                }
+            });
+            $("#txtName").blur(function () {
+                var email_txt = $(this).val();
+                if (email_txt == "") {
+                    $(this).val(this.defaultValue);
+                }
+            });
+            $("#txtCompanyName").focus(function () {
+                var email_txt = $(this).val();
+                if (email_txt == this.defaultValue) {
+                    $(this).val("");
+                }
+            });
+            $("#txtCompanyName").blur(function () {
+                var email_txt = $(this).val();
+                if (email_txt == "") {
+                    $(this).val(this.defaultValue);
+                }
+            });
+            $("#txtTel").focus(function () {
+                var email_txt = $(this).val();
+                if (email_txt == this.defaultValue) {
+                    $(this).val("");
+                }
+            });
+            $("#txtTel").blur(function () {
+                var email_txt = $(this).val();
+                if (email_txt == "") {
+                    $(this).val(this.defaultValue);
+                }
+            });
+        }
+
+        {#            第二张图的左下角内容#}
+        $("#leftLabSecond").mouseover(function () {
+            $(this).css({
+                color: 'black',
+                border: '1px solid black'
+            })
+        })
+        $("#leftLabSecond").mouseout(function () {
+            $(this).css({
+                color: 'white',
+                border: '1px solid white'
+            })
+        })
+
+    </script>
+
+    <script src="static/js/wow.min.js"></script>
+
+    <script>
+        //
+        <!--width: 67.3%;height: 66.3%;-->
+        //
+        <!--width: 0%;height: 0%;-->
+        if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+            new WOW().init();
+        }
+        ;
+
+
+        var frameDuration = 0.3
+        var delayDuration = 0.03
+        var triggerHook = 0.8
+        // init controller
+        var controller = new ScrollMagic.Controller();
+
+        // build tween
+        var x = "72%"
+        var tween = TweenMax.staggerFromTo("#leftDIV", frameDuration, {left: '100%', width: 240}, {
+            left: x,
+            ease: Back.easeOut,
+            visibility: "visible"
+        });
+
+
+        // build scene
+        {#            var scene = new ScrollMagic.Scene({triggerElement: "#jianshenfangpage", duration: 0, offset: 100})#}
+        {#                    .setTween(tween)#}
+        {#                .addIndicators() // add indicators (requires plugin)#}
+        {#                    .addTo(controller)#}
+        ;
+        var tween2 = TweenMax.staggerFromTo("#labLeftSecond", frameDuration, {left: -300,}, {
+            left: '10%',
+            ease: Back.easeOut,
+            visibility: "visible"
+        });
+        {#            var scene = new ScrollMagic.Scene({triggerElement: "#leftDIV", duration: 0, offset: 200})#}
+        {#                    .setTween(tween2)#}
+        {#                .addIndicators() // add indicators (requires plugin)#}
+        {#                    .addTo(controller)#}
+        {#                ;#}
+
+
+        var animate = new TimelineMax();
+        animate.add(tween)
+        animate.add(tween2)
+        animate.add(
+            TweenMax.staggerFromTo("#blueBgSecond", frameDuration, {width: '0%'},
+                {width: '100%'})
+        )
+
+        animate.add(
+            TweenMax.staggerFromTo("#blueBgSecond", frameDuration, {height: '5%'},
+                {height: '80%'})
+        )
+        animate.add(
+            TweenMax.staggerFromTo("#blueBgSecond", 2, {opacity: 1},
+                {opacity: 0.9})
+        )
+
+        var viewportHeight = $(window).height()
+        var scene = new ScrollMagic.Scene({
+                triggerElement: "#jianshenfangpage",
+                duration: 0,
+                offset: $("#jianshenfangpage").height() / 2
+            })
+                .setTween(animate)
+                .triggerHook(triggerHook)
+                {#                    .addIndicators()// add indicators (requires plugin)#}
+                .addTo(controller)
+            ;
+
+
+    </script>
+
+    <script type="text/javascript">
+        function b() {
+            h = $(window).height();
+            t = $(document).scrollTop();
+            if (t > h) {
+                $('#gotop').show();
+            } else {
+                $('#gotop').hide();
+            }
+        }
+        $(document).ready(function (e) {
+
+            b();
+
+            $('#gotop').click(function () {
+                {#                    $(document).scrollTop(0);#}
+                $('html,body').animate({scrollTop: 0}, 1000);
+            });
+
+
+            {#            $('#code').hover(function () {#}
+            {#                $(this).attr('id', 'code_hover');#}
+            {##}
+            {#            }, function () {#}
+            {#                $(this).attr('id', 'code');#}
+            {#            })#}
+
+        });
+
+        $(window).scroll(function (e) {
+            b();
+        });
+    </script>
+
+
+</div>
+
+<script src="../static/js/index.js"></script>
+
+
+</body>
+</html>
